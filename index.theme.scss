@@ -69,7 +69,8 @@ body,
     }
   }
 
-  [class*="attachedBars"] {
+  [class*="attachedBars"],
+  [class*="replyBar"] {
     border-top-left-radius: #{$radius};
     border-top-right-radius: #{$radius};
   }
