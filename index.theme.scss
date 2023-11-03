@@ -274,4 +274,35 @@ body,
       }
     }
   }
+
+  // Guilds
+  & {
+
+    // Sidebar
+    [class*="sidebar"] {
+
+      // Channels
+      ul[aria-label="Channels"],
+      [class*="scroller"][class*="thin"][class*="customTheme"]>ul[class*="content"] {
+
+        // Each individual channel
+        [class*="containerDefault"] {
+
+          // Categories
+          &:has([aria-label*="(category)"]) {
+            padding: 8px 8px 2px 8px;
+          }
+
+          // Text Channels
+          &:has([aria-label*="(text channel)"]),
+          // Voice Channels
+          &:has([aria-label*="(voice channel)"]) {
+            a {
+              padding: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
