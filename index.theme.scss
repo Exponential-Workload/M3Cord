@@ -44,6 +44,7 @@ body,
 .theme-dark.theme-dark {
   --primary-600: #000000;
   --primary-630: #030303;
+  --primary-645: #040404;
   --primary-700: #060707;
   --bg-overlay-3: #050505;
   --background-secondary-alt: var(--bg-overlay-3);
@@ -215,6 +216,11 @@ body,
     box-shadow: #fff1 0px 0px 8px;
   }
 
+  [class*="layer"] [class*="focusLock"][aria-modal="true"] [class*="imageWrapper"] {
+    border-radius: 0;
+    box-shadow: none;
+  }
+
   [class*="overlayBackground"] {
     border-radius: #{$radius};
   }
@@ -299,6 +305,40 @@ body,
           &:has([aria-label*="(voice channel)"]) {
             a {
               padding: 8px;
+            }
+          }
+        }
+      }
+    }
+
+    // Chat Containers
+    [class*="chatContainer"] {
+
+      // Forums
+      &:has([data-list-item-id*="forum-channel-list"]),
+      &:has([aria-label="Create Post"]) {
+
+        // create post title thing
+        form {
+          [class*="formContainer"] {
+            [class*="inputWrapper"] {
+
+              // textbox
+              textarea {
+                height: 32px;
+                margin-top: 0;
+                padding-top: 3px;
+                padding-bottom: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &,
+                &::placeholder {
+                  font-weight: 350;
+                  font-family: var(--font-primary);
+                }
+              }
             }
           }
         }
