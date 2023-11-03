@@ -1,17 +1,22 @@
 @import url('https://fonts.nexus/css?family=Roboto:wght@300;400;500;600;700&family=Jetbrains+Mono');
+
 :root {
   --font-to-use: 'Roboto';
   --code-font-to-use: 'Jetbrains Mono'
 }
 
 /* handle funny moments - do not touch below this line (or do idc) */
-:root,html,body,#app-mount {
+:root,
+html,
+body,
+#app-mount {
   --font-primary: var(--font-to-use, Inter), 'Helvetica Neue', Helvetica, Arial, sans-serif, 'gg sans' !important;
   --font-display: var(--font-primary) !important;
   --font-headline: var(--font-to-use, Inter), 'ABC Ginto Nord', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
   --font-code: var(--code-font-to-use, 'Jetbrains Mono'), 'Jetbrains Mono', Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono',
     'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
 }
+
 .theme-dark.theme-dark {
   --primary-600: #000000;
   --primary-630: #030303;
@@ -26,14 +31,18 @@
 
 [class*="form"] [class*="channelTextArea"] [class*="scrollableContainer"] {
   padding: 4px 10px;
+  padding-left: 0;
 }
+
 [class*="form"] [class*="channelTextArea"] [class*="scrollableContainer"]:not([class*="hasConnectedBar"]) {
   border-radius: 24px;
 }
+
 [class*="form"] [class*="channelTextArea"] [class*="scrollableContainer"][class*="hasConnectedBar"] {
   border-bottom-left-radius: 24px;
   border-bottom-right-radius: 24px;
 }
+
 [class*="attachedBars"] {
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
@@ -45,77 +54,94 @@ button[type=button][class*="lookFilled"] {
   padding: 12px 24px;
   min-width: max-content;
 }
+
 [class*="sidebar"] [class*="item"][role="tab"],
 button[class*="button"] {
   border-radius: 24px;
 }
+
 [class*="item"][role=tab] {
   transition: 0.3s;
   padding: 12px 12px;
 }
-[class*="connectionList"] > [class*="connection"],
+
+[class*="connectionList"]>[class*="connection"],
 [class*="connectContainer"] {
   border-radius: 24px;
   padding: 12px 12px;
 }
-[class*="connectionList"] > [class*="connection"] > [class*="connectionHeader"],
+
+[class*="connectionList"]>[class*="connection"]>[class*="connectionHeader"],
 [class*="inputWrapper"] [class*="inputDefault"] {
   border-radius: 26px;
 }
+
 [class*="inputWrapper"],
 [class*="note"] {
   border: 1px solid #fff0;
   border-radius: 26px;
   --deprecated-text-input-border-hover: #ffffff15;
 }
+
 [class*="inputDefault"] {
   border: 1px solid #fff1;
   padding: 12px 14px;
   border-radius: 24px;
 }
+
 [class*="inputDefault"]:focus,
 [class*="inputDefault"]:active {
   border: 1px solid #fff2;
 }
+
 [class*="avatarWrapper"] {
   border-radius: 26px !important;
 }
+
 [class*="avatarDecorationHint"] {
   /* border-radius: 100% !important; */
   display: none;
 }
+
 [class*="userPopoutOuter"] {
   border-radius: 24px;
 }
-[class*="userPopoutOuter"] > [class*="userPopoutInner"],
-[class*="userPopoutOuter"] > [class*="userPopoutInner"]::before {
+
+[class*="userPopoutOuter"]>[class*="userPopoutInner"],
+[class*="userPopoutOuter"]>[class*="userPopoutInner"]::before {
   border-radius: 26px;
 }
+
 [class*="menu"][class*="flexible"][role="menu"],
 [class*="bannerSVGWrapper"],
 [class*="formNotice"],
 [class*="authedApp"] {
   border-radius: 24px;
 }
+
 [class*="menu"][class*="flexible"][role="menu"] [class*="item"] {
   border-radius: 25px;
   transition: 0.2s;
 }
+
 [class*="formNotice_"],
 [class*="authedApp"] {
   background: #ffffff02;
 }
+
 [class*="modal"],
 [class*="root"],
 [class*="flex"][class*="horizontal"][class*="footer"][class*="footerSeparator"],
 [class*="item"][class*="itemFilled"]:has([class*="radioBar"]) {
   border-radius: 24px;
 }
+
 [class*="radioBar"] {
   border-left-width: 4px;
   border-radius: 24px;
 }
-[class*="control"] > [class*="container"]:has(input[type="checkbox"]) {
+
+[class*="control"]>[class*="container"]:has(input[type="checkbox"]) {
   border-radius: 24px;
   width: 50px;
   height: 30px;
@@ -123,45 +149,69 @@ button[class*="button"] {
   align-items: center;
   justify-content: center;
 }
+
 [class*="container"] svg[class*="slider"][style*="left:"] {
   left: -3px !important;
   /* transform: translateX(0%); */
   transition: 0.3s;
 }
+
 [class*="container"][class*="checked"] svg[class*="slider"][style*="left:"] {
   left: 50px !important;
   transform: translateX(-100%);
 }
+
 div[class][role="button"] [class*="expandedInfo"] {
   border-radius: 24px;
 }
+
 [class*="paymentPane"] {
   border-radius: 24px;
 }
+
 [class*="paymentRow"][class*="bottomDivider"] {
   border-bottom: 0px !important;
 }
+
 [class*="cardPrimary"][class*="card"] {
   border-radius: 24px;
 }
+
 [class*="channel"] [class*="interactive"] {
   border-radius: 24px;
   padding-right: 6px;
 }
+
 [class*="imageWrapper"] {
   border-radius: 24px;
   box-shadow: #fff1 0px 0px 8px;
 }
+
 [class*="overlayBackground"] {
   border-radius: 24px;
 }
 
 [class*="connectedAccountContainer"],
-[class*="userInfoSection"] [class*="note"] > textarea {
+[class*="userInfoSection"] [class*="note"]>textarea {
   border-radius: 24px;
   padding: 12px;
 }
-[class*="userProfileModalOverlayBackground"] > [class*="body"] {
+
+[class*="userProfileModalOverlayBackground"]>[class*="body"] {
   flex: 0 1 calc(100vh - 512px);
   max-height: 768px;
+}
+
+article[class*="embedWrapper"] {
+  border-radius: 28px;
+}
+
+[class*="popoutContainer"],
+[class*="noiseCancellationPopout"],
+[class*="layerContainer"] [id*="popout"] [class*="container"]>section[class*="section"] {
+  border-radius: 24px;
+}
+
+[class*="actionButtons"] {
+  display: none;
 }
