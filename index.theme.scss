@@ -353,4 +353,11 @@ body,
       }
     }
   }
+
+  // Message Buttons in Send bar
+  [aria-label="Send a gift"],
+  [aria-label="Open GIF picker"],
+  [aria-label="Open sticker picker"] {
+    display: none !important;
+  }
 }
